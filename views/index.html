@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Node &amp; Express REST API</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />    
+    <style>
+        body {padding: 40px;}
+        a>i { font-size: 3rem !important; margin-right: 10px !important;}
+        .jumbotron { padding-bottom: 20px !important;}
+    </style>
+</head>
+<body>
+    <main class="container-lg">
+        <header class="jumbotron">
+            <h1 class="display-2">REST API</h1>
+            <h2>A RESTful Web Service Powered by Node &amp; Express</h2>
+        </header>
+        <section class="container-fluid">
+            <section>
+                <h3>Acroynyms & Terminology:</h3>
+                <ul>
+                    <li>REST: REpresentational State Transfer - <a href="https://www.codecademy.com/articles/what-is-rest" target="_blank">Definition &amp; Discussion</a></li>
+                    <li>API: Application Programming Interface - <a href="https://www.freecodecamp.org/news/what-is-an-api-in-english-please-b880a3214a82/" target="_blank">Definition &amp; Discussion</a></li>
+                    <li>HTTP Methods / Verbs  - <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods" target="_blank">Definition &amp; Discussion</a></li>
+                    <li>HTTP Response Status Codes - <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="_blank">Listing of Codes</a></li>
+                    <li>CRUD: Create, Read, Update, Delete - <a href="https://www.codecademy.com/articles/what-is-crud" target="_blank">Definition &amp; Discussion</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Introduction</h3>
+                <p>An example of a modern, RESTful, scalable web service built with <a href="https://nodejs.org/en/about/" target="_blank">Node</a> and <a href="https://expressjs.com/" target="_blank">Express</a>.</p>
+            </section>
+            <hr>
+            <section>
+                <h2 class="display-5">API Details:</h2>
+                <h3>Accept Parameters</h3>
+                <p>The API will respond to the following 'Accept:' values with appropriate content.</p>
+                <ul>
+                    <li>text/plain - Content will be returned as a plain string.</li>
+                    <li>application/json - Content will be returned as a JSON object.</li>
+                    <li>text/html - Content will be returned as an HTML page containing key:value pairs in an unordered list.</li>
+                </ul>
+                <h3>Operations</h3>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Method</th>
+                            <th>Path</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>GET</td>
+                            <td>/</td>
+                            <td>This page. <em>HTML response.</em></td>
+                        </tr>
+                        <tr>
+                            <td>GET</td>
+                            <td>/form</td>
+                            <td>Will return an example HTML5 form that sends requests to this API. <em>HTML response.</em></td>
+                        </tr>
+                        <tr>
+                            <td>GET</td>
+                            <td>/routes/json</td>
+                            <td>Will return example JSON data in the form of <code>{"message": data}</code>. <em>JSON response.</em></td>
+                        </tr>
+                        <tr>
+                            <td>GET</td>
+                            <td>/routes/time</td>
+                            <td>Will return the current date and time in JSON <code>{"time": datetime}</code>. <em>JSON response.</em></td>
+                        </tr>
+                        <tr>
+                            <td>GET</td>
+                            <td>/:word/echo</td>
+                            <td>Will return JSON that echoes the <code>:word</code> parameter <code>{"echo": word}</code>. <em>JSON response.</em></td>
+                        </tr>
+                        <tr>
+                            <td>GET, POST</td>
+                            <td>/routes/name?first=param&last=param</td>
+                            <td>Will return the first and last name parameters in requested response format.</td>
+                        </tr>
+                        <tr>
+                            <td>GET</td>
+                            <td>/routes/name/about</td>
+                            <td>Will return a description of the /routes/name endpoint.</td>
+                        </tr>
+                        <tr>
+                            <td>GET, POST, PUT</td>
+                            <td>/routes/echo-all?key1=param&key2=param</td>
+                            <td>Will return all parameters in requested response format.</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <h3>Testing</h3>
+                <p>
+                    Test CRUD operations, Accept parameters, and construct requests with 
+                    <a href="https://www.getpostman.com/" target="_blank">Postman</a>.
+                </p>
+                <h3>Suggestions / Contributions</h3>
+                <p>
+                    All suggestions are welcome. This simple RESTful API is intended to be an 
+                    example web service for students.
+                </p>
+                <a href="https://github.com/gitdagray" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://youtube.com/davegrayteachescode" target="_blank">
+                    <i class="fab fa-youtube-square"></i>
+                </a>
+                <a href="https://twitter.com/yesdavidgray" target="_blank">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/davidagray/" target="_blank">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </section>
+        </section>
+    </main>
+</body>
+</html>

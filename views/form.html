@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Form Processor</title>
+    <link rel="stylesheet" href="/form-style.css">
+</head>
+<body>
+    <h1>Web Form Processor</h1>
+    <form action="/routes/name" method="get">
+        <div>
+            <label>First Name :</label>
+            <input type="text" name="first"><br>
+            <label>Last Name :</label>
+            <input type="text" name="last">
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+            <button type="submit" formmethod="post">Submit using POST</button>
+            <button type="reset">Reset</button>
+        </div>
+    </form> 
+<script>
+    const first = document.querySelector('input');
+    first.focus();
+
+    const resetBtn = document.querySelector("button[type='reset']");
+    resetBtn.addEventListener('click',() => first.focus());
+</script> 
+</body>
+</html>
