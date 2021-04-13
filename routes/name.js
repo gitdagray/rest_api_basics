@@ -23,7 +23,7 @@ function nameReply(req, res) {
         'text/html': () => {
             let html = '<ul>';
             html += `<li>name: ${firstName} ${lastName}</li>`;
-            html += `<ul>`;
+            html += '<ul>';
             res.send(html);
         },
 
